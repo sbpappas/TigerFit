@@ -27,10 +27,39 @@ object memoryModelFit{
         else false
     }
 
+    def updateDays(username: String, days: Int): Boolean = {
+        userInfo(username)._4 = days
+        true
+    }
 
-    // def updateWeight(username: String, newWeight: String): Boolean = {
-    //     userInfo(username)._1 = newWeight
-    //     true
-    // }
+    def updateFitnessGoal(username: String, goal: String): Boolean = {
+        userInfo(username)._3 = goal
+        true
+    }
+
+    def updateHeight(username: String, newHeight: Int): Boolean = {
+        userInfo(username)._2 = newHeight
+        true
+    }
+
+    def updateWeight(username: String, newWeight: Int): Boolean = {
+        userInfo(username)._1 = newWeight
+        true
+    }
+
+    def retrieveWorkoutByDate(username: String, date: String): Workout { //need to make a workout class?
+
+    }
+
+    /*retrieveWorkoutById(id: Int): Workout
+    retrieveAllWorkouts(username: String): Collection[Workout]
+    retrieveCompletedWorkouts(username: String): Collection[Date]
+    retrieveUnfinishedWorkouts(username: String): Collection[Date]
+    markWorkoutComplete(username: String, id: Int): Boolean
+
+    searchExercises(username: String, labels: Collection[String]): Collection[Exercise]
+    retrieveExercise(id: Int): Exercise*/
+
+
     
 }
